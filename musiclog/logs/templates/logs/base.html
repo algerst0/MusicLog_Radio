@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Music Log{% endblock %}</title>
+
+    <!-- Link the CSS file -->
+    <link rel="stylesheet" type="text/css" href="{% static 'logs/css/styles.css' %}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'upload_csv' %}" class="{% if request.resolver_match.url_name == 'upload_csv' %}active{% endif %}">Upload CSV</a></li>
+            <li><a href="{% url 'song-list' %}" class="{% if request.resolver_match.url_name == 'song-list' %}active{% endif %}">Song List</a></li>
+            <li><a href="{% url 'dj-songs' %}" class="{% if request.resolver_match.url_name == 'dj-songs' %}active{% endif %}">DJ Songs</a></li>
+        </ul>
+    </nav>
+
+
+    <hr>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: #333; /* Dark background color */
+    padding: 10px 20px;
+    position: fixed; /* Fix navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full-width navbar */
+    z-index: 1000; /* Ensure navbar is always on top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetics */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: flex-start; /* Align items to the left */
+}
+
+nav ul li {
+    margin-right: 20px; /* Spacing between nav items */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Darker hover effect */
+    color: #fff; /* Ensure text stays white */
+}
+
+nav ul li a.active {
+    background-color: #4CAF50; /* Active link background */
+    color: black;
+}
+
+.container {
+    margin-top: 20px; /* Add margin to avoid navbar overlap */
+    padding: 20px;
+}
+
+h1, h2, h3, p {
+    margin: 20px 0;
+}
+
+ul {
+    padding-left: 0;
+}
+
+ul li {
+    list-style-type: none;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+hr {
+    margin: 20px 0;
+}

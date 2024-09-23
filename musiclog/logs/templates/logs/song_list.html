@@ -1,0 +1,30 @@
+{% extends 'logs/base.html' %}
+
+{% block title %}Song List{% endblock %}
+
+{% block content %}
+<h1>Song List</h1>
+<form method="GET">
+    <label for="artist">Artist:</label>
+    <input type="text" name="artist" id="artist">
+
+    <label for="program">Program:</label>
+    <input type="text" name="program" id="program">
+
+    <label for="dj">DJ:</label>
+    <input type="text" name="dj" id="dj">
+
+    <label for="timestamp">Timestamp:</label>
+    <input type="datetime-local" name="timestamp" id="timestamp">
+
+    <button type="submit">Search</button>
+</form>
+
+<ul>
+{% for song in songs %}
+    <li>{{ song.song_title }}; by {{ song.artist }}; on {{ song.program }}; DJ {{ song.dj }}; at {{ song.timestamp }}</li>
+{% empty %}
+    <li>No songs found.</li>
+{% endfor %}
+</ul>
+{% endblock %}
